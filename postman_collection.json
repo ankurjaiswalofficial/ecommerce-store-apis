@@ -1,0 +1,88 @@
+{
+  "info": {
+    "name": "Ecommerce Store API",
+    "_postman_id": "12345678-1234-1234-1234-123456789012",
+    "description": "API collection for Ecommerce Store",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Add Item to Cart",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"userId\": \"user1\",\n    \"item\": {\n        \"id\": \"item1\",\n        \"price\": 10\n    }\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/cart/add",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "cart",
+            "add"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Checkout",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"userId\": \"user1\",\n    \"discountCode\": null\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/checkout/checkout",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "checkout",
+            "checkout"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Admin Stats",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/admin/stats",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "admin",
+            "stats"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
